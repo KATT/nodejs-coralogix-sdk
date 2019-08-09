@@ -65,6 +65,7 @@ export class CoralogixTransport extends winston.Transport{
                 if(msg)
                     log.text = msg + '\n' + log.text;                
             }
+            delete meta.message
         }
 
         this.logger.addLog(log);
